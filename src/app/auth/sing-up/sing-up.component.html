@@ -1,1 +1,34 @@
-<p>sing-up works!</p>
+<h2 class="form-header">Please fill this form to sign up</h2>
+
+<div class="text-white flex justify-center">
+
+  <form [formGroup]="form" (ngSubmit)="onSubmit()" class="form-styles">
+
+    <div formInput identifier="username" formControlName="username"></div>
+    @if (formControlIsValid(form.controls.username)) {
+      <p class="text-red-200">Please enter a valid username, it must have at least 6 chars</p>
+    }
+
+    <fieldset class="sm:flex sm:space-x-4" formGroupName="passwords" >
+      <div formInput identifier="password" type="password" formControlName="password1"></div>
+
+      <div formInput identifier="password2" type="password"  formControlName="password2" label="confirm password"></div> 
+      
+      
+    </fieldset>
+    @if (form.controls.passwords.errors) {
+      <p class="text-red-300">Passwords must match each other, length must be at least 6 char</p>
+    }
+
+    <div formInput identifier="email" type="email" formControlName="email"> </div>
+    @if (formControlIsValid(form.controls.email)) {
+
+      <p class="text-red-200">Please enter a valid email with at least 6 char</p>
+    }
+
+    <div class="mt-4">
+      <button type="submit" class="px-4 py-2 border rounded-xl">Log in</button>
+    </div>
+
+  </form>
+</div>

@@ -1,0 +1,11 @@
+<label for="{{identifier}}" class="capitalize">{{getLabel}}</label>
+<input
+  type="{{type}}"
+  class="border rounded-xl p-2 mt-1 "
+  name="{{identifier}}"
+  id="{{identifier}}"
+  placeholder="{{placeHolder}}"
+  (input)="onInputChange($event)"
+  (blur)="onTouched()"
+> 
+

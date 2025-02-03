@@ -1,2 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
 @import "tailwindcss";
+
+
+@layer {
+    .form-styles {
+        @apply bg-black/95  px-32 py-8 rounded-2xl min-w-[40%] space-y-4
+    }
+
+    .form-header {
+        @apply text-center text-2xl font-extrabold my-4
+    }
+}
