@@ -1,0 +1,15 @@
+<div class="text-white flex justify-center">
+  <form [formGroup]="form" (ngSubmit)="onSubmit()" class="bg-black p-8 rounded-2xl">
+
+    <div class="flex flex-col">
+      <label for="username">Username</label>
+      <input type="text" name="username" id="username" class="border">
+    </div>
+  
+    <div>
+      <label for="password">Password</label>
+      <input type="text" name="password" id="password">
+    </div>
+  </form>
+</div>
+
