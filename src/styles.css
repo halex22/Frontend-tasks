@@ -10,4 +10,8 @@
     .form-header {
         @apply text-center text-2xl font-extrabold my-4
     }
+
+    .boards-layout {
+        @apply p-4
+    }
 }
