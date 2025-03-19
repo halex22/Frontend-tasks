@@ -15,7 +15,7 @@ export class DataFetcherService {
     return this.httpClient.get<MessageBoard[]>(`${this.baseUrl}message-boards/`)
   }
 
-  fetchDetailedBoard(boardId: string): Observable<Message[]> {
+  fetchDetailedBoardMessages(boardId: string): Observable<Message[]> {
     const params = new HttpParams()
     params.set('board_id', boardId)
     return this.httpClient.get<Message[]>(`${this.baseUrl}messages`, {params})

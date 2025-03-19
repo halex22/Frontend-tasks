@@ -1,1 +1,8 @@
-<p>boards-list works!</p>
+@if (messageBoards) {
+  <h2 class="text-center font-extrabold">Boards</h2>
+  <ul class="flex gap-4">
+    @for (board of messageBoards; track $index) {
+      <li boardCard [board]="board" class="p-4 bg-black/95 hover:bg-black/80"></li>
+    }
+  </ul>
+}
