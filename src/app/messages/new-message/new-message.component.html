@@ -1,1 +1,10 @@
-<p>new-message works!</p>
+<form [formGroup]="messageForm" (ngSubmit)="createMessage()">
+  <textarea name="" id=""
+    formControlName="message"
+    class="w-full border-1 rounded-b-xl border-amber-500 p-2"
+  >
+    {{loadDraftMessage()}}
+  </textarea>
+  <button class="border-1 px-4 py-2">Send</button>
+</form>
+
