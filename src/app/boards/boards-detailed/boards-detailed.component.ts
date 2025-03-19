@@ -3,11 +3,12 @@ import { DataFetcherService } from '../../services/data-fetcher.service';
 import { Message } from '../../services/data.models';
 import {FormControl, ReactiveFormsModule, FormGroup, Validators} from '@angular/forms'
 import { debounceTime } from 'rxjs';
+import { MessagesComponent } from '../../messages/messages.component';
  
 @Component({
   selector: 'app-boards-detailed',
   standalone: true,
-  imports: [ReactiveFormsModule],
+  imports: [ReactiveFormsModule, MessagesComponent],
   templateUrl: './boards-detailed.component.html',
   styles: ``
 })
